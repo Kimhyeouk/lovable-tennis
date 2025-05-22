@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>테니스 예약 관리</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>트라이 테니스 예약 관리</h1>
+  </header>
+
+  <section class="controls">
+    <label for="datePicker">날짜 선택:</label>
+    <input type="date" id="datePicker" />
+    <label for="lessonType">레슨 종류:</label>
+    <select id="lessonType">
+      <option value="individual">개인 레슨</option>
+      <option value="group">그룹 레슨</option>
+    </select>
+  </section>
+
+  <section id="schedule">
+    <!-- 스케줄 타임슬롯이 여기 생성됩니다 -->
+  </section>
+
+  <!-- 예약 모달 -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>예약 정보 입력</h2>
+      <form id="reservationForm">
+        <div class="form-group">
+          <label for="coachSelect">코치 선택:</label>
+          <select id="coachSelect" required>
+            <!-- JS에서 옵션 생성 -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="memberName">회원 이름:</label>
+          <input type="text" id="memberName" required>
+        </div>
+        <div class="buttons">
+          <button type="submit">확인</button>
+          <button type="button" id="cancelBtn">취소</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
